@@ -725,12 +725,12 @@ var UserBox = React.createClass({
             className: 'navbar-text',
             style: {marginRight: '5px'}
           },
-          (worldStore.state.user.balance / 100) + ' bits',
+          (worldStore.state.user.balance / 100) + '  ShitBits',
           !worldStore.state.user.unconfirmed_balance ?
            '' :
            el.span(
              {style: { color: '#e67e22'}},
-             ' + ' + (worldStore.state.user.unconfirmed_balance / 100) + ' bits pending'
+             ' + ' + (worldStore.state.user.unconfirmed_balance / 100) + '  ShitBits pending'
            )
         ),
         // Refresh button
@@ -1301,7 +1301,7 @@ var BetBoxWager = React.createClass({
           style: style1,
           onChange: this._onWagerChange,
           disabled: !!worldStore.state.isLoading,
-          placeholder: 'Bits'
+          placeholder: 'ShitBits'
         }
       ),
       el.div(
@@ -1748,7 +1748,7 @@ var MyBetsTabContent = React.createClass({
               el.td(
                 null,
                 helpers.round10(bet.wager/100, -2),
-                ' bits'
+                ' ShitBits'
               ),
               // target
               el.td(
@@ -1769,7 +1769,7 @@ var MyBetsTabContent = React.createClass({
                 bet.profit > 0 ?
                   '+' + helpers.round10(bet.profit/100, -2) :
                   helpers.round10(bet.profit/100, -2),
-                ' bits'
+                ' ShitBits'
               )
             );
           }).reverse()
@@ -1865,7 +1865,7 @@ var FaucetTabContent = React.createClass({
     case 'SUCCESSFULLY_CLAIMED':
       innerNode = el.div(
         null,
-        'Successfully claimed ' + this.state.claimAmount/100 + ' bits.' +
+        'Successfully claimed ' + this.state.claimAmount/100 + ' ShitBits.' +
           // TODO: What's the real interval?
           ' You can claim again in 5 minutes.'
       );
@@ -1932,7 +1932,7 @@ var BetRow = React.createClass({
       el.td(
         null,
         helpers.round10(bet.wager/100, -2),
-        ' bits'
+        ' ShitBits'
       ),
       // Target
       el.td(
@@ -2043,7 +2043,7 @@ var BetRow = React.createClass({
         bet.profit > 0 ?
           '+' + helpers.round10(bet.profit/100, -2) :
           helpers.round10(bet.profit/100, -2),
-        ' bits'
+        ' ShitBits'
       )
     );
   }
