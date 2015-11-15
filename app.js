@@ -117,7 +117,7 @@ helpers.roleToLabelElement = function(role) {
     case 'OWNER':
       return el.span({className: 'label label-primary'}, 'ShitOwner');
     default:
-      return '';
+      return el.span({className: 'label label-success'}, 'ShitUser');;
   }
 };
 
