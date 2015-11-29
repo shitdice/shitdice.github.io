@@ -1865,9 +1865,9 @@ var FaucetTabContent = React.createClass({
     case 'SUCCESSFULLY_CLAIMED':
       innerNode = el.div(
         null,
-        'Successfully claimed ' + this.state.claimAmount/100 + ' ShitBits. Free money!<br />' +
+        'Successfully claimed ' + this.state.claimAmount/100 + ' ShitBits. Free money! \n' +
           // TODO: What's the real interval?
-          ' You can claim again in 5 minutes, you greedy little shit.'
+          'You can claim again in 5 minutes, you greedy little shit.'
       );
       break;
     case 'ALREADY_CLAIMED':
