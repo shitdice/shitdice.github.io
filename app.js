@@ -1849,7 +1849,7 @@ var FaucetTabContent = React.createClass({
     if (!worldStore.state.user) {
       return el.p(
         {className: 'lead'},
-        'You must login to claim faucet'
+        'You must login to claim the faucet you fucking idiot'
       );
     }
 
@@ -1865,9 +1865,9 @@ var FaucetTabContent = React.createClass({
     case 'SUCCESSFULLY_CLAIMED':
       innerNode = el.div(
         null,
-        'Successfully claimed ' + this.state.claimAmount/100 + ' ShitBits.' +
+        'Successfully claimed ' + this.state.claimAmount/100 + ' ShitBits. Free money!<br />' +
           // TODO: What's the real interval?
-          ' You can claim again in 5 minutes.'
+          ' You can claim again in 5 minutes, you greedy little shit.'
       );
       break;
     case 'ALREADY_CLAIMED':
